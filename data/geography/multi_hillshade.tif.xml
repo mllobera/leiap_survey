@@ -1,0 +1,2 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<metadata xml:lang="en"><Esri><CreaDate>20210530</CreaDate><CreaTime>18432800</CreaTime><ArcGISFormat>1.0</ArcGISFormat><SyncOnce>TRUE</SyncOnce><DataProperties><lineage><Process ToolSource="c:\program files (x86)\arcgis\desktop10.6\ArcToolbox\Toolboxes\Spatial Analyst Tools.tbx\RasterCalculator" Date="20210530" Time="184328">RasterCalculator ""multi_hillshade.tif" * ("DEM_5m.tif" / "DEM_5m.tif")" C:\Users\marcos\OneDrive\LEIAp\data\geography\multi_hillshadeB.tif</Process></lineage></DataProperties></Esri></metadata>

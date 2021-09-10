@@ -1,0 +1,22 @@
+name: leiap21
+channels:
+  - conda-forge
+dependencies:
+  - python>=3.9
+  - scikit-learn
+  - districtdatalabs::yellowbrick
+  - kneed
+  - numpy
+  - scipy
+  - seaborn
+  - pandas
+  - geopandas
+  - rasterio
+  - jupyterlab = 3
+  - jupytext
+  - jupyter
+  - tqdm
+  - fiona
+  - shapely
+  - openpyxl
+  - nodejs
