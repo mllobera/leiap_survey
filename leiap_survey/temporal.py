@@ -476,11 +476,11 @@ def ao_calculate_probability_from_weights(feature, aow):
 
     Notes
     -----
-    Aoristic weights represent the probability for each entry in feature and
-    time interval combination. A feature will typically be associated with one
-    or more entries in the aoristic weight dataframe. The probabiliy that a
-    feature occured at any time interval is the probability that at least one
-    entry (row) associated with a feature occurred.
+    Aoristic weights represent the probability that a feature is present at a
+    time interval. A feature (e.g. site, field, survey point) will typically
+    be associated with one or more temporal entries in the aoristic weight
+    dataframe. The probabiliy that a feature occured at any time interval is
+    the probability that at least one of these temporal entries (row) occurred.
 
     Example
     -------
