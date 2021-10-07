@@ -49,6 +49,6 @@ Install **leiap_survey** package
 
 Citation
 --------
-If you use this package please use the following citation:
+The following is part of a manuscript submitted to the Journal of Archaeological Method and Theory:
 
 >Llobera, M, Hernandez Gasch, J., Puig Palerm, A., Deppen, J., Rullán Cruellas, P., Hunt, D. and Iacobucci, A. *Interpreting Traces: A data science approach to survey data*. In *Journal of Archaeological Method and Theory*
