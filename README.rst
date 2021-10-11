@@ -29,7 +29,7 @@ for Python 3.7 or above.
 
 - Activate the new environment,
 
-   >>> activate leiap21
+  >>> activate leiap21
 
 Install **leiap_survey** package
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -39,9 +39,9 @@ Install **leiap_survey** package
 - Use ``pip`` to install the **leiap_survey** package into the ``site-packages`` folder 
   in the *leiap_survey* environment you newly created.
 
-  Install directly from the *source*
+  Install directly from the *source*   
 
-   >>> pip install dist/leiap_survey-2021.9.tar.gz
+  >>> pip install dist/leiap_survey-2021.9.tar.gz
 
   Install using *wheels*
 
