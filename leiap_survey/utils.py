@@ -1,3 +1,5 @@
+""" Module contains ploting functions"""
+
 import numpy as np
 import rasterio as rio
 import matplotlib as mpl

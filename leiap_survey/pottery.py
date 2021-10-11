@@ -1,4 +1,5 @@
-# imports
+""" Module contains functions to select diagnostic ceramic productions"""
+
 import pandas as pd
 import leiap_survey.temporal as tmp
 from tqdm.notebook import tqdm

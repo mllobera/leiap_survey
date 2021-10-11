@@ -1,3 +1,5 @@
+""" Module contains functions to generate temporal intersections and aoristic analysis """
+
 import pandas as pd
 import numpy as np
 
