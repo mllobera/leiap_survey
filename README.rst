@@ -47,6 +47,11 @@ Install **leiap_survey** package
 
   >>> pip install dist/leiap_survey-2021.9-py3*
 
+Documentation
+^^^^^^^^^^^^^^
+
+Visit the following <documentation>() page for full description of tools  
+
 Citation
 --------
 The following is part of a manuscript submitted to the Journal of Archaeological Method and Theory:
