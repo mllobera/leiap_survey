@@ -1,3 +1,4 @@
+""" Module with functions to help generate binary_metric_matrix, diagnose and explore clusters"""
 
 import numpy as np
 import pandas as pd
