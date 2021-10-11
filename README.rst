@@ -54,6 +54,6 @@ Visit the following `documentation <https://mllobera.github.io/leiap_survey/docs
 
 Citation
 --------
-The following is part of a manuscript submitted to the Journal of Archaeological Method and Theory:
+The following is part of a manuscript submitted to the Journal of Archaeological Method and Theory:   
 
->Llobera, M, Hernandez Gasch, J., Puig Palerm, A., Deppen, J., Rullán Cruellas, P., Hunt, D. and Iacobucci, A. *Interpreting Traces: A data science approach to survey data*. In *Journal of Archaeological Method and Theory*
+> Llobera, M, Hernandez Gasch, J., Puig Palerm, A., Deppen, J., Rullán Cruellas, P., Hunt, D. and Iacobucci, A. *Interpreting Traces: A data science approach to survey data*. In *Journal of Archaeological Method and Theory*
