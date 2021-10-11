@@ -50,7 +50,7 @@ Install **leiap_survey** package
 Documentation
 ^^^^^^^^^^^^^^
 
-Visit the following <documentation>() page for full description of tools  
+Visit the following `documentation <https://mllobera.github.io/leiap_survey/docs/html/index.html>` page for full description of tools  
 
 Citation
 --------
