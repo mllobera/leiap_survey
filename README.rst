@@ -54,6 +54,7 @@ Visit the following `documentation <https://mllobera.github.io/leiap_survey/docs
 
 Citation
 --------
-The following is part of a manuscript submitted to the Journal of Field Archaeology:   
+The following is part of a set of manuscripts:   
 
-> Llobera, M, Hernandez Gasch, J., Puig Palerm, A., Deppen, J., Rullán Cruellas, P., Hunt, D. and Iacobucci, A. *Interpreting Traces: A data science approach to survey data*. In *Journal of Field Archaeology*
+> Llobera, M, Hernández Gasch, J., Puig Palerm, A., Deppen, J., Rullán Cruellas, P., Hunt, D. and A. Iacobucci. *Interpreting Traces: A data science approach to survey data*. Submitted to  *Journal of Field Archaeology*
+> Llobera, M and J. Hernández Gasch. * Making sense of difference: A new dissimilarity coefficient for clustering pottery surface assemblages*. Submitted to *Journal of Archaeological Science*  
