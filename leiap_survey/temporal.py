@@ -400,7 +400,7 @@ def ao_find_temporal_intersection(ti1, ti2):
     # CASE 1b
     ti1_ends_after_ti2_ends = ti1[1] >= ti2[:, 1]
     sel = ti1_starts_before_ti2_starts & ti1_ends_after_ti2_ends
-    rslt[sel] = delta_ti2 / delta_ti1
+    rslt[sel] = delta_ti2[sel] / delta_ti1
 
     # CASE 1c
     ti1_ends_within_ti2 = (ti1[1] >= ti2[:, 0]) & (ti1[1] < ti2[:, 1])
@@ -418,7 +418,7 @@ def ao_find_temporal_intersection(ti1, ti2):
     # CASE 2b
     ti2_ends_after_ti1_ends = ti2[:, 1] >= ti1[1]
     sel = ti2_starts_before_ti1_starts & ti2_ends_after_ti1_ends
-    rslt[sel] = delta_ti2 / delta_ti1
+    rslt[sel] = delta_ti2[sel] / delta_ti1
 
     # CASE 2c
     ti2_ends_within_ti1 = (ti2[:, 1] >= ti1[0]) & (ti2[:, 1] <= ti1[1])
@@ -431,32 +431,61 @@ def ao_find_temporal_intersection(ti1, ti2):
         return rslt
 
 
-def ao_calculate_weights(df, df_ti, chrono=['Start', 'End']):
+def ao_calculate_weights(ati, dist, kw):
     '''
-    Calculates aoristic weights
-
+    Calculates weights for each time interval.
+        
     Parameters
     ----------
-    df: Pandas dataframe
-        Dataframe where each row (usually a feature) is associated with a
-        temporal interval
-    df_ti: Pandas dataframe
-        Each row represents a temporal interval (usually the output from
-        ```create_temporal_intersections()```)
-    chrono: list
-        contains the name of the columns in df_ti that define the temporal
-        interval
-
-    Return
-    ------
-    Pandas dataframe
-        Dataframe with aoristic weights (intersections) for each row and time interval
-        combination
+    ati: dataframe
+        contains temporal intervals with two columns (start,end) indicating when intervals start and end
+    dist: scipy.stats statistical distribution or string
+        statistical distribution or name of the column containing the statistical distribution to use     
+    kw: dictionary
+        contains names of statistical distribution parameters and columns names (str) associated with each of these
+        
+    Notes
+    -----
+    For a given temporal interval [t1, t2], weight is calculated by finding the Cumulative Density Function(t2 - t1) of the probability distribution
+    associated with temporal evidence (e.g. sherd). Usually this probability distribution will be the uniform p.d. but could
+    be some other p.d. as well.
+    
     '''
-    rslt = []
-    for ti in df[chrono].values.tolist():
-        rslt += [ao_find_temporal_intersection(ti, df_ti.values.tolist())]
-    return pd.DataFrame(data=rslt, columns=df_ti.index)
+    
+    from scipy.stats import rv_continuous, rv_discrete
+    
+    
+    if isinstance(dist, str):
+        # associate each parameter with its column
+        kw2 = {k: df[v].values for k, v in zip(kw.keys(), kw.values())}
+        
+        # for each row (=probability distribution) generate a dictionary with parameters
+        parms = [dict(zip(kw2.keys(), values)) for values in zip(*kw2.values())]
+        
+        # for each row generate frozen probability distributions
+        fz_dists = [ pdist(**params) for pdist, params in zip(df[dist].values, parms)]
+        
+        # calculate aoristic weight (intersection of all aoritstic time intervals with probability distributions)
+        aow = [ f.cdf(ati.values[:,1])-f.cdf(ati.values[:,0]) for f in fz_dists]
+        
+        return pd.DataFrame(aow, columns= ati.index)
+    
+    elif isinstance(dist, (rv_continuous, rv_discrete)):
+        # associate each pararameter with its column
+        kw2={}
+        for k in kw.keys():
+            kw2[k] = df[kw[k]].values
+        
+        # generate frozen probability distributions (for all rows)
+        fz_dists = dist(**kw2)
+        
+        # calculate aoristic weight (intersection of all aoritstic time intervals with probability distributions)
+        # by looping thru each aoristic temporal interval
+        aow = [fz_dists.cdf(e)-fz_dists.cdf(s) for s,e in ati.values]
+        aow = np.array(aow).T
+        return pd.DataFrame(aow, columns = ati.index)
+    else:
+        assert('dist is not a string or a scipy.stats function')
 
 
 def ao_calculate_probability_from_weights(feature, aow):
@@ -513,8 +542,6 @@ def ao_calculate_probability_from_weights(feature, aow):
 
 
     '''
-
-
     # extract temporal interval columns labels
     ti_cols = aow.columns.values.tolist()
 
@@ -524,19 +551,22 @@ def ao_calculate_probability_from_weights(feature, aow):
     # concatenate features with their aoristic weights
     tmp = pd.concat([feature.reset_index(feat_cols),aow], axis='columns')
 
-    # function used to calculate probability for each feature from the
-    # probabilites of all rows associated with that feature
-    def not_p(series):
-        p_not = 1.0 - series
-        return 1 - np.prod(p_not)
+    # function used to calculate probability for each feature from the probabilites
+    # of all rows associated with that feature
+    def not_p(series): 
+        return 1.0 - np.prod(1.0 - series)
 
     agg_dict = dict.fromkeys(ti_cols, not_p)
 
-    # group by unique feature
-    grp_tmp = tmp.groupby(feat_cols, as_index=feature.index.names).agg(agg_dict)
-
-    return grp_tmp.divide(grp_tmp.sum(axis='columns') + 0.000001, axis='rows')
-
+    # calculating the probability of each feature.
+    # First group by each feature and run the above function then
+    # divide by the sum 
+    grp_tmp = tmp.groupby(feat_cols, as_index= feature.index.names).agg(agg_dict)
+    
+    if len(ti_cols) == 1:
+        return grp_tmp
+    else:
+        return grp_tmp.divide(grp_tmp.sum(axis='columns') + 1e-8, axis='rows')
 
 def ao_simulation(prob_feat, N=1000):
     '''
