@@ -4,19 +4,15 @@ channels:
 dependencies:
   - python>=3.9
   - scikit-learn
-  - districtdatalabs::yellowbrick
+  - mamba
   - kneed
   - numpy
   - scipy
   - seaborn
-  - pandas
-  - geopandas
+  - geopandas>= 0.10
   - rasterio
   - jupyterlab = 3
-  - jupytext
   - jupyter
   - tqdm
-  - fiona
-  - shapely
   - openpyxl
   - nodejs
