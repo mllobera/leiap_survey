@@ -1,15 +1,15 @@
 <!doctype html>
-<html class="no-js">
+<html class="no-js" lang="en">
   <head><meta charset="utf-8"/>
     <meta name="viewport" content="width=device-width,initial-scale=1"/>
-    <meta name="color-scheme" content="light dark"><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+    <meta name="color-scheme" content="light dark"><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
 <link rel="index" title="Index" href="../genindex.html" /><link rel="search" title="Search" href="../search.html" /><link rel="next" title="leiap_survey.utils" href="leiap_survey.utils.html" /><link rel="prev" title="leiap_survey.pottery" href="leiap_survey.pottery.html" />
 
-    <meta name="generator" content="sphinx-4.0.2, furo 2021.08.31"/>
+    <!-- Generated with Sphinx 5.3.0 and Furo 2022.12.07 -->
         <title>leiap_survey.temporal - leiap_survey 2021.9 documentation</title>
       <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/styles/furo.css?digest=c7c65a82b42f6b978e58466c1e9ef2509836d916" />
-    <link rel="stylesheet" type="text/css" href="../_static/styles/furo-extensions.css?digest=16fb25fabf47304eee183a5e9af80b1ba98259b1" />
+    <link rel="stylesheet" type="text/css" href="../_static/styles/furo.css?digest=91d0f0d1c444bdcb17a68e833c7a53903343c195" />
+    <link rel="stylesheet" type="text/css" href="../_static/styles/furo-extensions.css?digest=30d1aed668e5c3a91c3e3bf6a60b675221979f0e" />
     
     
 
@@ -20,38 +20,38 @@
   --color-code-foreground: black;
   
   }
-  body[data-theme="dark"] {
-    --color-code-background: #202020;
-  --color-code-foreground: #d0d0d0;
-  
-  }
-  @media (prefers-color-scheme: dark) {
-    body:not([data-theme="light"]) {
+  @media not print {
+    body[data-theme="dark"] {
       --color-code-background: #202020;
   --color-code-foreground: #d0d0d0;
   
     }
+    @media (prefers-color-scheme: dark) {
+      body:not([data-theme="light"]) {
+        --color-code-background: #202020;
+  --color-code-foreground: #d0d0d0;
+  
+      }
+    }
   }
 </style></head>
   <body>
+    
     <script>
       document.body.dataset.theme = localStorage.getItem("theme") || "auto";
     </script>
     
+
 <svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
   <symbol id="svg-toc" viewBox="0 0 24 24">
     <title>Contents</title>
-    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-      stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-      <path stroke="none" d="M0 0h24v24H0z" />
-      <line x1="4" y1="6" x2="20" y2="6" />
-      <line x1="10" y1="12" x2="20" y2="12" />
-      <line x1="6" y1="18" x2="20" y2="18" />
+    <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 1024 1024">
+      <path d="M408 442h480c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8H408c-4.4 0-8 3.6-8 8v56c0 4.4 3.6 8 8 8zm-8 204c0 4.4 3.6 8 8 8h480c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8H408c-4.4 0-8 3.6-8 8v56zm504-486H120c-4.4 0-8 3.6-8 8v56c0 4.4 3.6 8 8 8h784c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8zm0 632H120c-4.4 0-8 3.6-8 8v56c0 4.4 3.6 8 8 8h784c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8zM115.4 518.9L271.7 642c5.8 4.6 14.4.5 14.4-6.9V388.9c0-7.4-8.5-11.5-14.4-6.9L115.4 505.1a8.74 8.74 0 0 0 0 13.8z"/>
     </svg>
   </symbol>
   <symbol id="svg-menu" viewBox="0 0 24 24">
     <title>Menu</title>
-    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
       stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather-menu">
       <line x1="3" y1="12" x2="21" y2="12"></line>
       <line x1="3" y1="6" x2="21" y2="6"></line>
@@ -60,14 +60,14 @@
   </symbol>
   <symbol id="svg-arrow-right" viewBox="0 0 24 24">
     <title>Expand</title>
-    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
       stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather-chevron-right">
       <polyline points="9 18 15 12 9 6"></polyline>
     </svg>
   </symbol>
   <symbol id="svg-sun" viewBox="0 0 24 24">
     <title>Light mode</title>
-    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
       stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="feather-sun">
       <circle cx="12" cy="12" r="5"></circle>
       <line x1="12" y1="1" x2="12" y2="3"></line>
@@ -82,7 +82,7 @@
   </symbol>
   <symbol id="svg-moon" viewBox="0 0 24 24">
     <title>Dark mode</title>
-    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
       stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="icon-tabler-moon">
       <path stroke="none" d="M0 0h24v24H0z" fill="none" />
       <path d="M12 3c.132 0 .263 0 .393 0a7.5 7.5 0 0 0 7.92 12.446a9 9 0 1 1 -8.313 -12.454z" />
@@ -90,7 +90,7 @@
   </symbol>
   <symbol id="svg-sun-half" viewBox="0 0 24 24">
     <title>Auto light/dark mode</title>
-    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
       stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="icon-tabler-shadow">
       <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
       <circle cx="12" cy="12" r="9" />
@@ -134,7 +134,7 @@
           <svg class="theme-icon-when-light"><use href="#svg-sun"></use></svg>
         </button>
       </div>
-      <label class="toc-overlay-icon toc-header-icon no-toc" for="__toc">
+      <label class="toc-overlay-icon toc-header-icon" for="__toc">
         <div class="visually-hidden">Toggle table of contents sidebar</div>
         <i class="icon"><svg><use href="#svg-toc"></use></svg></i>
       </label>
@@ -149,12 +149,12 @@
   <span class="sidebar-brand-text">leiap_survey 2021.9 documentation</span>
   
 </a><form class="sidebar-search-container" method="get" action="../search.html" role="search">
-  <input class="sidebar-search" placeholder=Search name="q" aria-label="Search">
+  <input class="sidebar-search" placeholder="Search" name="q" aria-label="Search">
   <input type="hidden" name="check_keywords" value="yes">
   <input type="hidden" name="area" value="default">
 </form>
 <div id="searchbox"></div><div class="sidebar-scroll"><div class="sidebar-tree">
-  <p class="caption"><span class="caption-text">Contents:</span></p>
+  <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
 <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="../includeme.html">LEIAP survey package</a></li>
 <li class="toctree-l1 current has-children"><a class="reference internal" href="../modules.html">Modules</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" role="switch" type="checkbox"/><label for="toctree-checkbox-1"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul class="current">
@@ -168,15 +168,23 @@
 
 </div>
 </div>
+
       </div>
       
     </div>
   </aside>
   <div class="main">
     <div class="content">
-      <article role="main">
+      <div class="article-container">
+        <a href="#" class="back-to-top muted-link">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+            <path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12z"></path>
+          </svg>
+          <span>Back to top</span>
+        </a>
         <div class="content-icon-container">
-          <div class="theme-toggle-container theme-toggle-content">
+          
+<div class="theme-toggle-container theme-toggle-content">
             <button class="theme-toggle">
               <div class="visually-hidden">Toggle Light / Dark / Auto color theme</div>
               <svg class="theme-icon-when-auto"><use href="#svg-sun-half"></use></svg>
@@ -184,63 +192,62 @@
               <svg class="theme-icon-when-light"><use href="#svg-sun"></use></svg>
             </button>
           </div>
-          <label class="toc-overlay-icon toc-content-icon no-toc" for="__toc">
+          <label class="toc-overlay-icon toc-content-icon" for="__toc">
             <div class="visually-hidden">Toggle table of contents sidebar</div>
             <i class="icon"><svg><use href="#svg-toc"></use></svg></i>
           </label>
         </div>
-        <section id="module-leiap_survey.temporal">
-<span id="leiap-survey-temporal"></span><h1>leiap_survey.temporal<a class="headerlink" href="#module-leiap_survey.temporal" title="Permalink to this headline">¶</a></h1>
+        <article role="main">
+          <section id="module-leiap_survey.temporal">
+<span id="leiap-survey-temporal"></span><h1>leiap_survey.temporal<a class="headerlink" href="#module-leiap_survey.temporal" title="Permalink to this heading">#</a></h1>
 <p>Module contains functions to generate temporal intersections and aoristic analysis</p>
 <p class="rubric">Functions</p>
-<div class="table-wrapper"><table class="longtable docutils align-default">
-<colgroup>
-<col style="width: 10%"/>
-<col style="width: 90%"/>
-</colgroup>
+<div class="table-wrapper autosummary longtable docutils container">
+<table class="autosummary longtable docutils align-default">
 <tbody>
-<tr class="row-odd"><td><p><a class="reference internal" href="#leiap_survey.temporal.ao_calculate_probability_from_weights" title="leiap_survey.temporal.ao_calculate_probability_from_weights"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ao_calculate_probability_from_weights</span></code></a>(…)</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#leiap_survey.temporal.ao_calculate_probability_from_weights" title="leiap_survey.temporal.ao_calculate_probability_from_weights"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ao_calculate_probability_from_weights</span></code></a>(...)</p></td>
 <td><p>Calculates probabilities based on aoristic weights</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#leiap_survey.temporal.ao_calculate_weights" title="leiap_survey.temporal.ao_calculate_weights"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ao_calculate_weights</span></code></a>(df, df_ti[, chrono])</p></td>
-<td><p>Calculates aoristic weights</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="#leiap_survey.temporal.ao_calculate_weights" title="leiap_survey.temporal.ao_calculate_weights"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ao_calculate_weights</span></code></a>(ati, dist, kw)</p></td>
+<td><p>Calculates weights for each time interval.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#leiap_survey.temporal.ao_find_temporal_intersection" title="leiap_survey.temporal.ao_find_temporal_intersection"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ao_find_temporal_intersection</span></code></a>(ti1, ti2)</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#leiap_survey.temporal.ao_find_temporal_intersection" title="leiap_survey.temporal.ao_find_temporal_intersection"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ao_find_temporal_intersection</span></code></a>(ti1, ti2)</p></td>
 <td><p>Finds temporal intersection between time intervals for aoristic analysis</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#leiap_survey.temporal.ao_simulation" title="leiap_survey.temporal.ao_simulation"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ao_simulation</span></code></a>(prob_feat[, N])</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="#leiap_survey.temporal.ao_simulation" title="leiap_survey.temporal.ao_simulation"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ao_simulation</span></code></a>(prob_feat[, N])</p></td>
 <td><p>Simulates presence of a feature at a time period</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#leiap_survey.temporal.calculate_temporal_intersection" title="leiap_survey.temporal.calculate_temporal_intersection"><code class="xref py py-obj docutils literal notranslate"><span class="pre">calculate_temporal_intersection</span></code></a>(ti1, ti2)</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#leiap_survey.temporal.calculate_temporal_intersection" title="leiap_survey.temporal.calculate_temporal_intersection"><code class="xref py py-obj docutils literal notranslate"><span class="pre">calculate_temporal_intersection</span></code></a>(ti1, ti2)</p></td>
 <td><p>Calculates the intersection between two temporal intervals</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#leiap_survey.temporal.calculate_temporal_intersection_ratio" title="leiap_survey.temporal.calculate_temporal_intersection_ratio"><code class="xref py py-obj docutils literal notranslate"><span class="pre">calculate_temporal_intersection_ratio</span></code></a>(ti1, ti2)</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="#leiap_survey.temporal.calculate_temporal_intersection_ratio" title="leiap_survey.temporal.calculate_temporal_intersection_ratio"><code class="xref py py-obj docutils literal notranslate"><span class="pre">calculate_temporal_intersection_ratio</span></code></a>(ti1, ti2)</p></td>
 <td><p>Calculates the intersection between two temporal intervals as a ratio</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#leiap_survey.temporal.create_time_intervals" title="leiap_survey.temporal.create_time_intervals"><code class="xref py py-obj docutils literal notranslate"><span class="pre">create_time_intervals</span></code></a>(start, end, interval)</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#leiap_survey.temporal.create_time_intervals" title="leiap_survey.temporal.create_time_intervals"><code class="xref py py-obj docutils literal notranslate"><span class="pre">create_time_intervals</span></code></a>(start, end, interval)</p></td>
 <td><p>Generates time intervals</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#leiap_survey.temporal.generate_temporal_intersection_table" title="leiap_survey.temporal.generate_temporal_intersection_table"><code class="xref py py-obj docutils literal notranslate"><span class="pre">generate_temporal_intersection_table</span></code></a>(ti1, ti2_df)</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="#leiap_survey.temporal.generate_temporal_intersection_table" title="leiap_survey.temporal.generate_temporal_intersection_table"><code class="xref py py-obj docutils literal notranslate"><span class="pre">generate_temporal_intersection_table</span></code></a>(ti1, ti2_df)</p></td>
 <td><p>Creates table of temporal intersections</p></td>
 </tr>
 </tbody>
-</table></div>
+</table>
+</div>
 <dl class="py function">
 <dt class="sig sig-object py" id="leiap_survey.temporal.ao_calculate_probability_from_weights">
-<span class="sig-name descname"><span class="pre">ao_calculate_probability_from_weights</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">feature</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">aow</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/leiap_survey/temporal.html#ao_calculate_probability_from_weights"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#leiap_survey.temporal.ao_calculate_probability_from_weights" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">ao_calculate_probability_from_weights</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">feature</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">aow</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/leiap_survey/temporal.html#ao_calculate_probability_from_weights"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#leiap_survey.temporal.ao_calculate_probability_from_weights" title="Permalink to this definition">#</a></dt>
 <dd><p>Calculates probabilities based on aoristic weights</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>feature</strong> (<em>Pandas dataframe</em>) – Contains one or several rows with the same feature identifier</p></li>
 <li><p><strong>aow</strong> (<em>Pandas dataframe</em>) – Contains aoristic weights for each row in feature</p></li>
 </ul>
 </dd>
-<dt class="field-even">Returns</dt>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
 <dd class="field-even"><p>Dataframe with the probability for distinct feature and temporal interval
 combination</p>
 </dd>
-<dt class="field-odd">Return type</dt>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
 <dd class="field-odd"><p>Pandas dataframe</p>
 </dd>
 </dl>
@@ -251,15 +258,8 @@ be associated with one or more temporal entries in the aoristic weight
 dataframe. The probabiliy that a feature occured at any time interval is
 the probability that at least one of these temporal entries (row) occurred.</p>
 <p class="rubric">Example</p>
-<div class="table-wrapper"><table class="docutils align-default">
-<colgroup>
-<col style="width: 38%"/>
-<col style="width: 14%"/>
-<col style="width: 14%"/>
-<col style="width: 14%"/>
-<col style="width: 8%"/>
-<col style="width: 14%"/>
-</colgroup>
+<div class="table-wrapper docutils container">
+<table class="docutils align-default">
 <thead>
 <tr class="row-odd"><th class="head"></th>
 <th class="head"><p>ti1</p></th>
@@ -285,9 +285,12 @@ the probability that at least one of these temporal entries (row) occurred.</p>
 <td></td>
 </tr>
 </tbody>
-</table></div>
-<div class="math-wrapper"><div class="math notranslate nohighlight">
-\[ \begin{align}\begin{aligned}\mathsf {P(Feat1 / ti1) = P(Entry1 \cap Entry2) \cup P(\lnot Entry1 \cap Entry2) \cup P(Entry1 \cap \lnot Entry2)=\\= P(Entry1) \cdot P(Entry2) + P(\lnot Entry1) \cdot P(Entry2) + P(Entry1) \cdot P( \lnot Entry2)=\\= 0.2 \cdot 0.1 + 0.8 \cdot 0.1 + 0.2 \cdot 0.9 = 0.28\\\therefore P(Feat1 / ti1) = 1 - P(\lnot Entry1 \cap \lnot Entry2) = 1 - (0.8 \cdot 0.9) = 0.28 }\end{aligned}\end{align} \]</div></div>
+</table>
+</div>
+<div class="math-wrapper docutils container">
+<div class="math notranslate nohighlight">
+\[ \begin{align}\begin{aligned}\mathsf {P(Feat1 / ti1) = P(Entry1 \cap Entry2) \cup P(\lnot Entry1 \cap Entry2) \cup P(Entry1 \cap \lnot Entry2)=\\= P(Entry1) \cdot P(Entry2) + P(\lnot Entry1) \cdot P(Entry2) + P(Entry1) \cdot P( \lnot Entry2)=\\= 0.2 \cdot 0.1 + 0.8 \cdot 0.1 + 0.2 \cdot 0.9 = 0.28\\\therefore P(Feat1 / ti1) = 1 - P(\lnot Entry1 \cap \lnot Entry2) = 1 - (0.8 \cdot 0.9) = 0.28 }\end{aligned}\end{align} \]</div>
+</div>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>NB1. Feature identifies should be indexes of feature dataframe</p>
@@ -298,45 +301,41 @@ the probability that at least one of these temporal entries (row) occurred.</p>
 feature adds up to less than 1.0 (for the sake of simulation)</p>
 </div>
 </dd></dl>
+
 <dl class="py function">
 <dt class="sig sig-object py" id="leiap_survey.temporal.ao_calculate_weights">
-<span class="sig-name descname"><span class="pre">ao_calculate_weights</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">df</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">df_ti</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">chrono</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">['Start',</span> <span class="pre">'End']</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/leiap_survey/temporal.html#ao_calculate_weights"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#leiap_survey.temporal.ao_calculate_weights" title="Permalink to this definition">¶</a></dt>
-<dd><p>Calculates aoristic weights</p>
+<span class="sig-name descname"><span class="pre">ao_calculate_weights</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">ati</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dist</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">kw</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/leiap_survey/temporal.html#ao_calculate_weights"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#leiap_survey.temporal.ao_calculate_weights" title="Permalink to this definition">#</a></dt>
+<dd><p>Calculates weights for each time interval.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>df</strong> (<em>Pandas dataframe</em>) – Dataframe where each row (usually a feature) is associated with a
-temporal interval</p></li>
-<li><p><strong>df_ti</strong> (<em>Pandas dataframe</em>) – Each row represents a temporal interval (usually the output from
-<code class="docutils literal notranslate"><span class="pre">`create_temporal_intersections()`</span></code>)</p></li>
-<li><p><strong>chrono</strong> (<em>list</em>) – contains the name of the columns in df_ti that define the temporal
-interval</p></li>
+<li><p><strong>ati</strong> (<em>dataframe</em>) – contains temporal intervals with two columns (start,end) indicating when intervals start and end</p></li>
+<li><p><strong>dist</strong> (<em>scipy.stats statistical distribution</em><em> or </em><em>string</em>) – statistical distribution or name of the column containing the statistical distribution to use</p></li>
+<li><p><strong>kw</strong> (<em>dictionary</em>) – contains names of statistical distribution parameters and columns names (str) associated with each of these</p></li>
 </ul>
 </dd>
-<dt class="field-even">Returns</dt>
-<dd class="field-even"><p>Dataframe with aoristic weights (intersections) for each row and time interval
-combination</p>
-</dd>
-<dt class="field-odd">Return type</dt>
-<dd class="field-odd"><p>Pandas dataframe</p>
-</dd>
 </dl>
+<p class="rubric">Notes</p>
+<p>For a given temporal interval [t1, t2], weight is calculated by finding the Cumulative Density Function(t2 - t1) of the probability distribution
+associated with temporal evidence (e.g. sherd). Usually this probability distribution will be the uniform p.d. but could
+be some other p.d. as well.</p>
 </dd></dl>
+
 <dl class="py function">
 <dt class="sig sig-object py" id="leiap_survey.temporal.ao_find_temporal_intersection">
-<span class="sig-name descname"><span class="pre">ao_find_temporal_intersection</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">ti1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ti2</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/leiap_survey/temporal.html#ao_find_temporal_intersection"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#leiap_survey.temporal.ao_find_temporal_intersection" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">ao_find_temporal_intersection</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">ti1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ti2</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/leiap_survey/temporal.html#ao_find_temporal_intersection"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#leiap_survey.temporal.ao_find_temporal_intersection" title="Permalink to this definition">#</a></dt>
 <dd><p>Finds temporal intersection between time intervals for aoristic analysis</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>ti1</strong> (<em>list</em><em> or </em><em>numpy array</em>) – temporal interval</p></li>
 <li><p><strong>ti2</strong> (<em>list</em><em> or </em><em>numpy array</em>) – temporal interval/s as a list, list of list, 1D or 2D numpy array</p></li>
 </ul>
 </dd>
-<dt class="field-even">Returns</dt>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
 <dd class="field-even"><p><strong>rslt</strong> – contains intersection of ti1 with ti2</p>
 </dd>
-<dt class="field-odd">Return type</dt>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
 <dd class="field-odd"><p>numpy array</p>
 </dd>
 </dl>
@@ -344,12 +343,13 @@ combination</p>
 <p>Intersection is described as a ratio of delta_ti2 or temporal
 intersection with over delta_ti1</p>
 </dd></dl>
+
 <dl class="py function">
 <dt class="sig sig-object py" id="leiap_survey.temporal.ao_simulation">
-<span class="sig-name descname"><span class="pre">ao_simulation</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">prob_feat</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">N</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1000</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/leiap_survey/temporal.html#ao_simulation"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#leiap_survey.temporal.ao_simulation" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">ao_simulation</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">prob_feat</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">N</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1000</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/leiap_survey/temporal.html#ao_simulation"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#leiap_survey.temporal.ao_simulation" title="Permalink to this definition">#</a></dt>
 <dd><p>Simulates presence of a feature at a time period</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>prob_feat</strong> (<em>Pandas dataframe</em>) – A dataframe where each row represents a different feature and each
 column represents the probability of the presence of the feature in
@@ -357,30 +357,28 @@ each time period (=column)</p></li>
 <li><p><strong>N</strong> (<em>Integer</em>) – Number of simulations</p></li>
 </ul>
 </dd>
-<dt class="field-even">Returns</dt>
-<dd class="field-even"><p></p>
-</dd>
-<dt class="field-odd">Return type</dt>
-<dd class="field-odd"><p>dataframe with N rows where each row has the number of features present at each time period (=column)</p>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p>dataframe with N rows where each row has the number of features present at each time period (=column)</p>
 </dd>
 </dl>
 </dd></dl>
+
 <dl class="py function">
 <dt class="sig sig-object py" id="leiap_survey.temporal.calculate_temporal_intersection">
-<span class="sig-name descname"><span class="pre">calculate_temporal_intersection</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">ti1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ti2</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/leiap_survey/temporal.html#calculate_temporal_intersection"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#leiap_survey.temporal.calculate_temporal_intersection" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">calculate_temporal_intersection</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">ti1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ti2</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/leiap_survey/temporal.html#calculate_temporal_intersection"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#leiap_survey.temporal.calculate_temporal_intersection" title="Permalink to this definition">#</a></dt>
 <dd><p>Calculates the intersection between two temporal intervals</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>ti1</strong> (<em>list</em><em> or </em><em>numpy array</em>) – temporal interval</p></li>
 <li><p><strong>ti2</strong> (<em>list</em><em> or </em><em>numpy array</em>) – temporal interval/s as a list, list of list, 1D or 2D numpy array</p></li>
 </ul>
 </dd>
-<dt class="field-even">Returns</dt>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
 <dd class="field-even"><p><strong>rslt</strong> – contains information about the intersection of ti1 with all temporal
 intervals in ti2</p>
 </dd>
-<dt class="field-odd">Return type</dt>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
 <dd class="field-odd"><p>numpy array</p>
 </dd>
 </dl>
@@ -392,49 +390,50 @@ of delta_ti1
 of delta_ti2
 - gap: temporal gap betweeen ti1 and ti2
 - type: type of intersection according to the following scheme:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">case</span> <span class="mi">1</span><span class="p">:</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">case</span> <span class="mi">1</span><span class="p">:</span>
        <span class="n">ti1</span><span class="p">:</span>   <span class="p">[</span>       <span class="p">]</span>
        <span class="n">ti2</span><span class="p">:</span>            <span class="o">&lt;--</span><span class="n">gap</span><span class="o">--&gt;</span><span class="p">[</span>     <span class="p">]</span>
 
-<span class="n">case</span> <span class="mi">2</span><span class="p">:</span>
+<span class="k">case</span> <span class="mi">2</span><span class="p">:</span>
        <span class="n">ti2</span><span class="p">:</span>   <span class="p">[</span>       <span class="p">]</span>
        <span class="n">ti1</span><span class="p">:</span>      <span class="p">[</span> <span class="p">]</span>
 
-<span class="n">case</span> <span class="mi">3</span><span class="p">:</span>
+<span class="k">case</span> <span class="mi">3</span><span class="p">:</span>
        <span class="n">ti1</span><span class="p">:</span>   <span class="p">[</span>       <span class="p">]</span>
        <span class="n">ti2</span><span class="p">:</span>       <span class="p">[</span>     <span class="p">]</span>
 
-<span class="n">case</span> <span class="mi">4</span><span class="p">:</span>
+<span class="k">case</span> <span class="mi">4</span><span class="p">:</span>
        <span class="n">ti1</span><span class="p">:</span>             <span class="o">&lt;--</span><span class="n">gap</span><span class="o">--&gt;</span><span class="p">[</span>     <span class="p">]</span>
        <span class="n">ti2</span><span class="p">:</span>    <span class="p">[</span>       <span class="p">]</span>
 
- <span class="n">case</span> <span class="mi">5</span><span class="p">:</span>
+ <span class="k">case</span> <span class="mi">5</span><span class="p">:</span>
         <span class="n">ti1</span><span class="p">:</span>        <span class="p">[</span> <span class="p">]</span>
         <span class="n">ti2</span><span class="p">:</span>     <span class="p">[</span>       <span class="p">]</span>
 
- <span class="n">case</span> <span class="mi">6</span><span class="p">:</span>
+ <span class="k">case</span> <span class="mi">6</span><span class="p">:</span>
         <span class="n">ti1</span><span class="p">:</span>       <span class="p">[</span>     <span class="p">]</span>
         <span class="n">ti2</span><span class="p">:</span>  <span class="p">[</span>       <span class="p">]</span>
 </pre></div>
 </div>
 </dd></dl>
+
 <dl class="py function">
 <dt class="sig sig-object py" id="leiap_survey.temporal.calculate_temporal_intersection_ratio">
-<span class="sig-name descname"><span class="pre">calculate_temporal_intersection_ratio</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">ti1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ti2</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/leiap_survey/temporal.html#calculate_temporal_intersection_ratio"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#leiap_survey.temporal.calculate_temporal_intersection_ratio" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">calculate_temporal_intersection_ratio</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">ti1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ti2</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/leiap_survey/temporal.html#calculate_temporal_intersection_ratio"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#leiap_survey.temporal.calculate_temporal_intersection_ratio" title="Permalink to this definition">#</a></dt>
 <dd><p>Calculates the intersection between two temporal intervals as a
 ratio</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>ti1</strong> (<em>list</em><em> or </em><em>numpy array</em>) – temporal interval</p></li>
 <li><p><strong>ti2</strong> (<em>list</em><em> or </em><em>numpy array</em>) – temporal interval/s as a list, list of list, 1D or 2D numpy array</p></li>
 </ul>
 </dd>
-<dt class="field-even">Returns</dt>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
 <dd class="field-even"><p><strong>rslt</strong> – contains information about the intersection of ti1 with all temporal
 intervals in ti2</p>
 </dd>
-<dt class="field-odd">Return type</dt>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
 <dd class="field-odd"><p>numpy array</p>
 </dd>
 </dl>
@@ -446,49 +445,47 @@ ratio intersection/delta_ti1</p></li>
 <li><p>gap: temporal gap betweeen ti1 and ti2</p></li>
 <li><p>type: type of intersection according to the following scheme:</p></li>
 </ul>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">case</span> <span class="mi">1</span><span class="p">:</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">case</span> <span class="mi">1</span><span class="p">:</span>
        <span class="n">ti1</span><span class="p">:</span>   <span class="p">[</span>       <span class="p">]</span>
        <span class="n">ti2</span><span class="p">:</span>            <span class="o">&lt;--</span><span class="n">gap</span><span class="o">--&gt;</span><span class="p">[</span>     <span class="p">]</span>
 
-<span class="n">case</span> <span class="mi">2</span><span class="p">:</span>
+<span class="k">case</span> <span class="mi">2</span><span class="p">:</span>
        <span class="n">ti2</span><span class="p">:</span>   <span class="p">[</span>       <span class="p">]</span>
        <span class="n">ti1</span><span class="p">:</span>      <span class="p">[</span> <span class="p">]</span>
 
-<span class="n">case</span> <span class="mi">3</span><span class="p">:</span>
+<span class="k">case</span> <span class="mi">3</span><span class="p">:</span>
        <span class="n">ti1</span><span class="p">:</span>   <span class="p">[</span>       <span class="p">]</span>
        <span class="n">ti2</span><span class="p">:</span>       <span class="p">[</span>     <span class="p">]</span>
 
-<span class="n">case</span> <span class="mi">4</span><span class="p">:</span>
+<span class="k">case</span> <span class="mi">4</span><span class="p">:</span>
        <span class="n">ti1</span><span class="p">:</span>             <span class="o">&lt;--</span><span class="n">gap</span><span class="o">--&gt;</span><span class="p">[</span>     <span class="p">]</span>
        <span class="n">ti2</span><span class="p">:</span>    <span class="p">[</span>       <span class="p">]</span>
 
- <span class="n">case</span> <span class="mi">5</span><span class="p">:</span>
+ <span class="k">case</span> <span class="mi">5</span><span class="p">:</span>
         <span class="n">ti1</span><span class="p">:</span>        <span class="p">[</span> <span class="p">]</span>
         <span class="n">ti2</span><span class="p">:</span>     <span class="p">[</span>       <span class="p">]</span>
 
- <span class="n">case</span> <span class="mi">6</span><span class="p">:</span>
+ <span class="k">case</span> <span class="mi">6</span><span class="p">:</span>
         <span class="n">ti1</span><span class="p">:</span>       <span class="p">[</span>     <span class="p">]</span>
         <span class="n">ti2</span><span class="p">:</span>  <span class="p">[</span>       <span class="p">]</span>
 </pre></div>
 </div>
 </dd></dl>
+
 <dl class="py function">
 <dt class="sig sig-object py" id="leiap_survey.temporal.create_time_intervals">
-<span class="sig-name descname"><span class="pre">create_time_intervals</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">start</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">end</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">interval</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/leiap_survey/temporal.html#create_time_intervals"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#leiap_survey.temporal.create_time_intervals" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">create_time_intervals</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">start</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">end</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">interval</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/leiap_survey/temporal.html#create_time_intervals"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#leiap_survey.temporal.create_time_intervals" title="Permalink to this definition">#</a></dt>
 <dd><p>Generates time intervals</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>start</strong> (<em>integer</em>) – Use negative values for BCE dates and positive for CE</p></li>
 <li><p><strong>end</strong> (<em>integer</em>) – Use negative values for BCE dates and positive for CE</p></li>
 <li><p><strong>interval</strong> (<em>integer</em>) – Temporal interva</p></li>
 </ul>
 </dd>
-<dt class="field-even">Returns</dt>
-<dd class="field-even"><p></p>
-</dd>
-<dt class="field-odd">Return type</dt>
-<dd class="field-odd"><p>dataframe where each row is a time interval.</p>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p>dataframe where each row is a time interval.</p>
 </dd>
 </dl>
 <p class="rubric">Notes</p>
@@ -497,30 +494,33 @@ even distribution based on the interval. If time periods span from BCE
 to CE it will adjust endpoints in order to have time periods that start
 and end with change in era.</p>
 </dd></dl>
+
 <dl class="py function">
 <dt class="sig sig-object py" id="leiap_survey.temporal.generate_temporal_intersection_table">
-<span class="sig-name descname"><span class="pre">generate_temporal_intersection_table</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">ti1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ti2_df</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ti2_kw</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">{'end':</span> <span class="pre">'End',</span> <span class="pre">'name':</span> <span class="pre">'Abbrev',</span> <span class="pre">'start':</span> <span class="pre">'Start'}</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/leiap_survey/temporal.html#generate_temporal_intersection_table"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#leiap_survey.temporal.generate_temporal_intersection_table" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">generate_temporal_intersection_table</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">ti1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ti2_df</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ti2_kw</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">{'end':</span> <span class="pre">'End',</span> <span class="pre">'name':</span> <span class="pre">'Abbrev',</span> <span class="pre">'start':</span> <span class="pre">'Start'}</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/leiap_survey/temporal.html#generate_temporal_intersection_table"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#leiap_survey.temporal.generate_temporal_intersection_table" title="Permalink to this definition">#</a></dt>
 <dd><p>Creates table of temporal intersections</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>ti1</strong> (<em>list</em><em> or </em><em>numpy array</em>) – temporal interval</p></li>
 <li><p><strong>ti2_df</strong> (<em>Pandas dataframe</em>) – temporal interval/s as dataframe</p></li>
 <li><p><strong>ti2_kw</strong> (<em>dictionary</em>) – contains information on what are the columns with start, end, and name</p></li>
 </ul>
 </dd>
-<dt class="field-even">Returns</dt>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
 <dd class="field-even"><p><strong>tbl</strong> – contains information about the intersection of ti1 with all temporal
 intervals in ti2_df</p>
 </dd>
-<dt class="field-odd">Return type</dt>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
 <dd class="field-odd"><p>Pandas dataframe</p>
 </dd>
 </dl>
 </dd></dl>
+
 </section>
 
-      </article>
+        </article>
+      </div>
       <footer>
         
         <div class="related-pages">
@@ -531,10 +531,10 @@ intervals in ti2_df</p>
                 </div>
                 <div class="title">leiap_survey.utils</div>
               </div>
-              <svg><use href="#svg-arrow-right"></use></svg>
+              <svg class="furo-related-icon"><use href="#svg-arrow-right"></use></svg>
             </a>
           <a class="prev-page" href="leiap_survey.pottery.html">
-              <svg><use href="#svg-arrow-right"></use></svg>
+              <svg class="furo-related-icon"><use href="#svg-arrow-right"></use></svg>
               <div class="page-info">
                 <div class="context">
                   <span>Previous</span>
@@ -545,25 +545,51 @@ intervals in ti2_df</p>
               </div>
             </a>
         </div>
-
-        <div class="related-information">
-              Copyright &#169; 2021, Marcos Llobera
-            |
-            Built with <a href="https://www.sphinx-doc.org/">Sphinx</a>
-              and
-              <a class="muted-link" href="https://pradyunsg.me">@pradyunsg</a>'s
-              <a href="https://github.com/pradyunsg/furo">Furo theme</a>.
-            |
-            <a class="muted-link" href="../_sources/_autosummary/leiap_survey.temporal.rst.txt"
-               rel="nofollow">
-              Show Source
-            </a>
+        <div class="bottom-of-page">
+          <div class="left-details">
+            <div class="copyright">
+                Copyright &#169; 2021, Marcos Llobera
+            </div>
+            Made with <a href="https://www.sphinx-doc.org/">Sphinx</a> and <a class="muted-link" href="https://pradyunsg.me">@pradyunsg</a>'s
+            
+            <a href="https://github.com/pradyunsg/furo">Furo</a>
+            
+          </div>
+          <div class="right-details">
+            
+          </div>
         </div>
         
       </footer>
     </div>
-    <aside class="toc-drawer no-toc">
+    <aside class="toc-drawer">
       
+      
+      <div class="toc-sticky toc-scroll">
+        <div class="toc-title-container">
+          <span class="toc-title">
+            On this page
+          </span>
+        </div>
+        <div class="toc-tree-container">
+          <div class="toc-tree">
+            <ul>
+<li><a class="reference internal" href="#">leiap_survey.temporal</a><ul>
+<li><a class="reference internal" href="#leiap_survey.temporal.ao_calculate_probability_from_weights"><code class="docutils literal notranslate"><span class="pre">ao_calculate_probability_from_weights()</span></code></a></li>
+<li><a class="reference internal" href="#leiap_survey.temporal.ao_calculate_weights"><code class="docutils literal notranslate"><span class="pre">ao_calculate_weights()</span></code></a></li>
+<li><a class="reference internal" href="#leiap_survey.temporal.ao_find_temporal_intersection"><code class="docutils literal notranslate"><span class="pre">ao_find_temporal_intersection()</span></code></a></li>
+<li><a class="reference internal" href="#leiap_survey.temporal.ao_simulation"><code class="docutils literal notranslate"><span class="pre">ao_simulation()</span></code></a></li>
+<li><a class="reference internal" href="#leiap_survey.temporal.calculate_temporal_intersection"><code class="docutils literal notranslate"><span class="pre">calculate_temporal_intersection()</span></code></a></li>
+<li><a class="reference internal" href="#leiap_survey.temporal.calculate_temporal_intersection_ratio"><code class="docutils literal notranslate"><span class="pre">calculate_temporal_intersection_ratio()</span></code></a></li>
+<li><a class="reference internal" href="#leiap_survey.temporal.create_time_intervals"><code class="docutils literal notranslate"><span class="pre">create_time_intervals()</span></code></a></li>
+<li><a class="reference internal" href="#leiap_survey.temporal.generate_temporal_intersection_table"><code class="docutils literal notranslate"><span class="pre">generate_temporal_intersection_table()</span></code></a></li>
+</ul>
+</li>
+</ul>
+
+          </div>
+        </div>
+      </div>
       
       
     </aside>
@@ -571,8 +597,10 @@ intervals in ti2_df</p>
 </div><script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
     <script src="../_static/jquery.js"></script>
     <script src="../_static/underscore.js"></script>
+    <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
     <script src="../_static/doctools.js"></script>
-    <script src="../_static/scripts/main.js"></script>
+    <script src="../_static/sphinx_highlight.js"></script>
+    <script src="../_static/scripts/furo.js"></script>
     <script async="async" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
     </body>
 </html>
