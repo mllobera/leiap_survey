@@ -56,5 +56,4 @@ Citation
 --------
 The following is part of a set of manuscripts:   
 
-> Llobera, M, Hernández Gasch, J., Puig Palerm, A., Deppen, J., Rullán Cruellas, P., Hunt, D. and A. Iacobucci. *Interpreting Traces: A data science approach to survey data*. Submitted to  *Journal of Field Archaeology*
-> Llobera, M and J. Hernández Gasch. * Making sense of difference: A new dissimilarity coefficient for clustering pottery surface assemblages*. Submitted to *Journal of Archaeological Science*  
+> Llobera, M. and Hernández Gasch, J. *Patterns on the landscape: Untangling Pottery Surface Assemblages*. Submitted to  *Journal of Archaeological Science*
